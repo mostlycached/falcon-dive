@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import input
+from .routes import input, generate
+
 
 app = FastAPI()
 
@@ -14,8 +15,9 @@ app.add_middleware(
 )
 
 app.include_router(input.router, prefix="/api", tags=["Input"])
+app.include_router(generate.router, prefix="/api", tags=["Content Generator"])
 
-# Example route
+# Health route
 @app.get("/api/health")
 async def health_check():
     return {"status": "OK", "message": "FastAPI is running"}

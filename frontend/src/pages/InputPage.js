@@ -21,7 +21,7 @@ function InputPage() {
 
   return (
     <div className="max-w-lg mx-auto mt-10 p-5 border border-gray-300 rounded-lg">
-      <h1 className="text-2xl font-bold mb-5">Set Up Your Campaign</h1>
+      <h1 className="text-2xl font-bold mb-5">Set Up Your Brand</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="productName" className="block font-medium text-gray-700">

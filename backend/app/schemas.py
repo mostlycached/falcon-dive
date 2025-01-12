@@ -6,3 +6,6 @@ class InputDataCreate(BaseModel):
     target_audience: str
     brand_tone: str
     competitors: str
+        
+    class Config:
+        orm_mode = True
